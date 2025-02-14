@@ -1,0 +1,57 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: pink;
+    overflow: hidden;
+    font-family: 'Arial', sans-serif;
+    color: white;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+}
+
+.slideshow {
+    position: relative;
+    width: 80%;
+    max-width: 800px;
+    text-align: center;
+}
+
+.slide {
+    display: none;
+}
+
+.slide.active {
+    display: block;
+}
+
+.slide img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.slide p {
+    margin-top: 20px;
+    font-size: 1.5em;
+    font-style: italic;
+}
+
+/* 爱心飘落特效 */
+@keyframes fall {
+    0% { top: -10%; }
+    100% { top: 100%; }
+}
+
+.heart {
+    position: absolute;
+    top: -10%;
+    color: red;
+    font-size: 20px;
+    animation: fall 5s linear infinite;
+}
