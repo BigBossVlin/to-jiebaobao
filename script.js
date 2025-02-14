@@ -14,6 +14,13 @@ function nextSlide() {
 
 setInterval(nextSlide, 10000);
 
+function handleMusic() {
+    const audio = document.getElementById('bg-music');
+    document.addEventListener('click', () => {
+        audio.play().catch(() => {});
+    }, { once: true });
+}
+
 // 创建爱心飘落特效
 function createHeart() {
     const heart = document.createElement('div');
